@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Blogs tagged “{{ tag }}” | {{ site_name }}{% endblock %}
+
+{% block content %}
+<h1>Blogs tagged “{{ tag }}”</h1>
+<ul>
+# for blog in blogs:
+<li><a href="{{ blog.url }}">{{ blog.title }}</a>, written on {{ blog.date | dateformat }}
+# endfor
+</ul>
+{{ content }}
+{% endblock %}

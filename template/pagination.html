@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog {{'Page '~(idx+1) if idx}} | {{ site_name }}{% endblock %}
+
+{% block content %}
+# for blog in blogs:
+<div class=overview>
+  <div class=date>{{ blog.date | dateformat }}</div>
+  <div class=detail>
+    <h1><a href="{{ blog.url }}">{{ blog.title }}</a></h1>
+    <div class=description><p>{{ blog.description }}</p></div>
+  </div>
+</div>
+# endfor
+<div class=pagination>
+# if idx:
+  <a href="/page/{{idx}}">&laquo; Previous</a>
+# else:
+  <span>&laquo; Previous</span>
+# endif
+ — {{idx+1}} — 
+# if is_last:
+  <span>Next &raquo;</span>
+# else:
+  <a href="/page/{{idx+2}}">Next &raquo;</a>
+# endif
+</div>
+
+{{ content }}
+{% endblock %}
