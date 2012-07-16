@@ -1,7 +1,6 @@
 {
-	"title":"测试",
-    "description":"a test article include code, picture and so on",
+    "title":"测试",
     "tags":"other",
-	"date":"2012-7-15 10:00",
+    "date":"2012-7-15 10:00",
     "enable mathjax":true
 }
