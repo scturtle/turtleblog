@@ -50,7 +50,8 @@ def per_blog(relpath=''):
     to = os.path.join('html', relpath)
 
     date = datetime.strptime(conf['date'], '%Y-%m-%d %H:%M')
-    url = '/{0}/'.format(relpath)
+    # fix url problem in Windows
+    url = '/{0}/'.format(relpath).replace('\\','/')
 
     # render markdown
     md = file(path.join(p,'blog.md')).read().decode('utf-8')
