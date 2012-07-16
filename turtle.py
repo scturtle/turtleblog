@@ -61,6 +61,7 @@ def per_blog(relpath=''):
     with file(tofile,'w') as f:
         f.write(env.get_template('blog.html').render(
             site_name = gconf['site name'],
+            disqus_shortname = gconf['disqus shortname'],
             title = conf['title'],
             date = date,
             enable_mathjax = 'enable mathjax' in conf and
@@ -77,7 +78,6 @@ def per_blog(relpath=''):
     return Blog(title = conf['title'],
                 url = url,
                 content = content,
-                description = conf['description'],
                 tags = conf['tags'].split(),
                 date = date)
 
@@ -159,7 +159,7 @@ def pages():
     for d in dirs:
         p = path.join('page', d)
         conf = json.load(file(path.join(p,'config.json')))
-        to = path.join('html', conf['url'])
+        to = path.join('html', d)
         os.mkdir(to)
 
         md = file(path.join(p,'page.md')).read().decode('utf-8')

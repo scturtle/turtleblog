@@ -36,7 +36,7 @@ dt                              { margin: 25px 0 16px 0; padding: 0; }
 dd                              { margin: 16px 0 25px 40px; padding: 0; }
 ul ol, ol ul, ul ul, ol ol      { margin: 10px 0; padding: 0 0 0 40px; }
 li                              { padding: 0; }
-h1 + p.date                     { margin-top: -28px; font-style: italic; }
+h1 + p.date                     { margin-top: -20px; font-style: italic; }
 
 /* code */
 pre, code   {   border: 1px solid #ddd; border-radius: 3px; }
@@ -51,17 +51,12 @@ td, th          { padding: 2px 12px; border: 1px solid #ddd; }
 
 /* blog overview */
 div.overview                    { margin: 25px 122px 25px 102px; }
-div.overview h1,
-div.overview div.description,
-div.overview div.description p  { display: inline; line-height: 25px; }
-div.overview h1                 { margin: 0; font-size: 20px; }
-div.overview div.description,
-div.overview div.date,
-div.overview div.description p  { margin: 0; padding: 0; }
 div.overview div.detail         { margin-left: 140px; }
-div.overview div.date           { float: left; width: 120px; color: #888;
+div.overview h1                 { display: inline; line-height: 25px;
+                                  margin: 0; font-size: 20px; }
+div.overview div.date           { margin: 0; padding: 0;
+                                  float: left; width: 120px; color: #888;
                                   text-align: right; font-style: italic; }
-div.overview h1:after           { content: " —"; }
 
 /* picture */
 img { border-radius: 0.3em;

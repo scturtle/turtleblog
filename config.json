@@ -3,5 +3,6 @@
     "site url": "http://scturtle.github.com",
     "author": "scturtle",
     "number of blogs per page": 10,
-    "markdown config":"extra codehilite"
+    "markdown config":"extra codehilite",
+    "disqus shortname":""
 }
