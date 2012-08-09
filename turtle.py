@@ -65,6 +65,7 @@ def per_blog(relpath=''):
             disqus_shortname = gconf['disqus shortname'],
             title = conf['title'],
             date = date,
+            tags = conf['tags'].split(),
             enable_mathjax = 'enable mathjax' in conf and
                                conf['enable mathjax'],
             content = content

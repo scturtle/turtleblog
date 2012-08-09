@@ -6,14 +6,11 @@
   <link href="{{ site_url }}/"/>
   <updated>{{ now | dateformat('%Y-%m-%dT%H:%M:00') }}</updated>
   <id>{{ site_url }}</id>
-  <author>
-    <name><![CDATA[{{ author }}]]></name>
-  </author>
-  <generator uri="https://github.com/scturtle/turtleblog">turtleblog</generator>
   
 # for blog in blogs:
   <entry>
     <title type="html"><![CDATA[{{ blog.title }}]]></title>
+    <author> <name><![CDATA[{{ author }}]]></name> </author>
     <link href="{{ site_url }}{{ blog.url }}"/>
     <updated>{{ blog.date | dateformat('%Y-%m-%dT%H:%M:00') }}</updated>
     <id>{{ site_url }}{{ blog.url }}</id>

@@ -4,7 +4,12 @@
 
 {% block content %}
 <h1 class=title>{{ title }}</h1>
-<p class=date>{{ date | dateformat }}</p>
+<p class=info>
+{{ date | dateformat }}
+# for tag in tags:
+<a href='/tags/{{ tag }}/'>#{{ tag }}</a>
+# endfor
+</p>
 {{ content | safe }}
 <div id="show_disqus"><a onclick="load_disqus();return false;" href="##">Show comments</a></div>
 <div id="disqus_thread"></div>

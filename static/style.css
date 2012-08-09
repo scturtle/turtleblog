@@ -28,7 +28,7 @@ div.footer                  { border-top: 1px dotted #ddd; padding-top: 9px;
                               margin-top: 32px; font-size: 16px; color: #888;
                               text-align: center; }
 div.footer p                { margin: 0; }
-h1 + p.date                 { color: #888; margin-top: -20px; font-style: italic; }
+h1 + .info                  { color: #888; margin-top: -20px; font-style: italic; }
 
 /* margins and stuff */
 p, ul, ol, pre, table       { margin: 25px 0 25px 0; }
