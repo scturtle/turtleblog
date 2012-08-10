@@ -1,39 +1,33 @@
 /* modified from http://lucumr.pocoo.org/ */
 /* general style */
 body    { font-family: 'Palatino';
-          font-size: 18px; margin: 0; padding: 0; }
-a       { color: #432165; }
-a:hover { color: #3b185f; background: #f9f8fa; }
+          font-size: 16px; margin: 0; padding: 0; }
+a       { color: #432165; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /* headlines */
 h1, h2, h3, h4, h5, h6      { font-weight: normal; }
-h1 a, h2 a, h3 a, h4 a,
-h5 a, h6 a                  { text-decoration: none; }
-h1 a:hover, h2 a:hover,
-h3 a:hover, h4 a:hover      { color: #432165; text-decoration: underline; }
-h1, h2                      { margin: 10px 0 25px 0; }
-h1                          { font-size: 36px; }
+h1                          { font-size: 30px; }
 h2                          { font-size: 24px; }
 
 /* layout elements */
-div.body                    { clear: both; border-top: 1px dotted #ddd; }
+div.body                    { clear: both; border-top: 1px dotted #ddd;
+                              padding-top: 20px;}
 div.container               { width: 740px; margin: 48px auto; padding: 0; }
 div.header                  { float: left; }
-div.header a                { font-size: 28px; line-height: 50px; 
-                              text-decoration: none; }
-div.navigation              { float: right; margin-top: 20px;}
+div.header a                { font-size: 24px; line-height: 50px; }
+div.navigation              { float: right; margin-top: 20px; }
 div.navigation ul           { margin: 0; padding: 0; list-style: none; }
 div.navigation ul li        { display: inline; margin: 0 2px; padding: 0; }
 div.footer                  { border-top: 1px dotted #ddd; padding-top: 9px;
                               margin-top: 32px; font-size: 16px; color: #888;
                               text-align: center; }
 div.footer p                { margin: 0; }
-h1 + .info                  { color: #888; margin-top: -20px; font-style: italic; }
+h1 + .info                  { color: #888; margin-top: -20px;
+                              font-style: italic; }
 
 /* margins and stuff */
-p, ul, ol, pre, table       { margin: 25px 0 25px 0; }
-dt                          { margin: 25px 0 16px 0; padding: 0; }
-dd                          { margin: 16px 0 25px 40px; padding: 0; }
+p, ul, ol, pre, table       { line-height: 1.5; margin: 20px 0; }
 ul ol, ol ul, ul ul, ol ol  { margin: 10px 0; padding: 0 0 0 40px; }
 li                          { padding: 0; }
 
@@ -53,9 +47,8 @@ td, th          { padding: 2px 12px; border: 1px solid #ddd; }
 /* blog overview */
 div.overview                    { margin: 25px 122px 25px 102px; }
 div.overview div.detail         { margin-left: 140px; }
-div.overview h1                 { display: inline; line-height: 25px;
-                                  margin: 0; font-size: 20px; }
-div.overview div.date           { margin: 0; padding: 0;
+div.overview h1                 { display: inline; font-size: 20px; }
+div.overview div.date           { padding-top: 2px;
                                   float: left; width: 120px; color: #888;
                                   text-align: right; font-style: italic; }
 
