@@ -1,8 +1,20 @@
 /* modified from http://lucumr.pocoo.org/ */
 /* general style */
-body    { font-family: 'Palatino';
-          font-size: 16px; margin: 0; padding: 0; }
-a       { color: #432165; text-decoration: none; }
+body {  font-family: /* from "safe web fonts" */
+        "Palatino Linotype",	/* Windows */
+        "URW Palladio L",		/* Unix+FontConfig (ugly!) */
+        "palladio l",		/* Unix+X+FreeType */
+        palatino,			/* MacOS */
+        "book antiqua",		/* Win95 */
+        /* Fallback options */
+        times,			/* Unix+X, MacOS */
+        serif;
+        /* "Goudy Old Style" is vaguely like Palatino. */
+        background-color: #F8F8F8;
+        font-size: 16px; margin: 0; padding: 0; }
+hr   { border: none; border-top: 1px solid #ddd; height: 0; }
+a    { color: #31257d; text-decoration: none; }
+code { color: #31257d; }
 a:hover { text-decoration: underline; }
 
 /* headlines */
@@ -12,7 +24,7 @@ h2                          { font-size: 24px; }
 
 /* layout elements */
 div.body                    { clear: both; border-top: 1px dotted #ddd;
-                              padding-top: 20px;}
+    padding-top: 20px;}
 div.container               { width: 740px; margin: 48px auto; padding: 0; }
 div.header                  { float: left; }
 div.header a                { font-size: 24px; line-height: 50px; }
@@ -32,12 +44,14 @@ ul ol, ol ul, ul ul, ol ol  { margin: 10px 0; padding: 0 0 0 40px; }
 li                          { padding: 0; }
 
 /* code */
-pre, code   { border: 1px solid #ddd; border-radius: 5px; }
-pre         { font-size: 0.82em; line-height: 1.3em; 
-              padding: 10px; background: #fafafa;
-              overflow: auto;}
-code        { font-size: 16px; background: #fafafa; color: #432165; 
-              padding: 0 5px; margin: 0 2px; }
+pre, code { font-family: Menlo,Monaco,"Andale Mono",
+            "lucida console", "Courier New",monospace;
+            border: 1px solid #ddd; border-radius: 5px; }
+pre       { font-size: 0.82em; line-height: 1.3em; 
+            padding: 10px; background: #fafafa;
+            overflow: auto;}
+code      { font-size: 15px; background: #fafafa;
+            padding: 2px 5px; margin: 0 2px; }
 
 /* tables */
 table           { border: 1px solid #ddd; border-collapse: collapse;
@@ -66,3 +80,11 @@ div.pagination  { margin: 24px 0 0 0; text-align: center; }
 ul.tagcloud     { font-size: 16px; margin: 36px 0; padding: 0;
                   list-style: none; }
 ul.tagcloud li  { margin: 0; padding: 0 10px; display: inline; }
+
+/* blockquote */
+blockquote, q{ 
+    border-left: 3px solid #550099;
+    font-style: italic;
+    margin-left: 0;
+    padding-left: 40px;
+}

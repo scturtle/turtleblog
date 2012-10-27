@@ -32,6 +32,10 @@ Long long very long English? Long long very long English! Long long very long En
 
 <img class=align-center src='img/head.jpg' style='width:100px'/>
 
+测试外部图片：
+
+![pic2](https://assets.github.com/images/modules/about_page/octocat.png)
+
 测试代码块：
 
 ~~~~{.python}
