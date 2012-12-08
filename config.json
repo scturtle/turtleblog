@@ -1,8 +1,8 @@
 {
     "site name": "ScTurtle's Pool",
-    "site url": "http://scturtle.github.com",
+    "site url": "http://scturtle.me",
     "author": "scturtle",
-    "number of blogs per page": 10,
+    "number of blogs per page": 5,
     "markdown config":"extra codehilite(guess_lang=False)",
     "disqus shortname":"scturtlespool"
 }

@@ -19,8 +19,8 @@ env = jinja2.Environment(loader=jinja2.FileSystemLoader('template'),
                          )
 
 
-def dateformat(value, format_str='%B %d, %Y'):
-    return value.strftime(format_str)
+def dateformat(value, format_str='%B {}, %Y'):
+    return value.strftime(format_str).format(value.day)
 
 env.filters['dateformat'] = dateformat
 
@@ -60,7 +60,7 @@ def per_blog(relpath=''):
 
     # render markdown
     md = file(path.join(p, 'blog.md')).read().decode('utf-8')
-    content = markdown(md, gconf['markdown config'].split())
+    content = markdown(md, gconf['markdown config'].split(), output_format='html5')
 
     # render template
     tofile = path.join(to, 'index.html')

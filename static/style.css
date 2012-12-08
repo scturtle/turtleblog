@@ -10,7 +10,8 @@ body {  font-family: /* from "safe web fonts" */
         times,			/* Unix+X, MacOS */
         serif;
         /* "Goudy Old Style" is vaguely like Palatino. */
-        background-color: #F8F8F8;
+        background-image: url("/static/bg.png"); /*from lhzhang.com*/
+        /*background-color: #F8F8F8;*/
         font-size: 16px; margin: 0; padding: 0; }
 hr   { border: none; border-top: 1px solid #ddd; height: 0; }
 a    { color: #31257d; text-decoration: none; }
@@ -63,7 +64,7 @@ div.overview                    { margin: 25px 122px 25px 102px; }
 div.overview div.detail         { margin-left: 140px; }
 div.overview h1                 { display: inline; font-size: 20px; }
 div.overview div.date           { padding-top: 2px;
-                                  float: left; width: 120px; color: #888;
+                                  float: left; width: 130px; color: #888;
                                   text-align: right; font-style: italic; }
 
 /* picture */
@@ -87,4 +88,5 @@ blockquote, q{
     font-style: italic;
     margin-left: 0;
     padding-left: 40px;
+    color: #555;
 }
