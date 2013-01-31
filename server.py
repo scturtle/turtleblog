@@ -2,21 +2,12 @@
 # coding: utf-8
 
 import os
-import sys
-import bottle
-from os import path
+import webbrowser
+import SocketServer
+import SimpleHTTPServer
 
-
-@bottle.route('/:p#.*#')
-def serve(p):
-    if path.isdir(path.join('html', p)):
-        p = path.join(p, 'index.html')
-    return bottle.static_file(p, root='html')
-
-if __name__ == '__main__':
-    bottle.debug(True)
-    if sys.platform.startswith('darwin'):
-        os.system('open -g ' + 'http://localhost:8080')
-    elif sys.platform.startswith('win'):
-        os.system('start ' + 'http://localhost:8080')
-    bottle.run(reloader=True)
+os.chdir('html')
+Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+httpd = SocketServer.TCPServer(("", 8080), Handler)
+webbrowser.open('http://localhost:8080')
+httpd.serve_forever()
