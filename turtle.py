@@ -128,6 +128,17 @@ def paging(infos):
 #====================================================
 
 
+def archive(infos):
+    ar = defaultdict(list)
+    for b in infos:
+        ar[b.date.year].append(b)
+    for y in ar:
+        ar[y].sort(key=lambda b: b.date, reverse=True)
+    renderToFile('html/archive.html', 'archive.html', ar=ar)
+
+#====================================================
+
+
 def tags(infos):
     shutil.rmtree('html/tags', ignore_errors=True)
     os.mkdir('html/tags')
@@ -181,6 +192,7 @@ def feed(infos):
 if __name__ == '__main__':
     infos = blogs()
     paging(infos)
+    archive(infos)
     tags(infos)
     pages()
     feed(infos)
