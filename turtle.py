@@ -6,22 +6,21 @@ import os
 import json
 import shutil
 import jinja2
+import markdown
 from os import path
 from math import log
-from markdown import markdown
 from datetime import datetime
 from collections import defaultdict
+
+gconf = json.load(open('config.json'))
+md = markdown.Markdown(extensions=gconf['markdown config'].split(),
+                       output='html5')
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('template'),
                          autoescape=True, line_statement_prefix='#')
 
-
-def dateformat(value, format_str='%B {}, %Y'):
-    return value.strftime(format_str).format(value.day)
-
+dateformat = lambda val, fmt='%B {}, %Y': val.strftime(fmt).format(val.day)
 env.filters['dateformat'] = dateformat
-
-gconf = json.load(file('config.json'))
 
 
 class Blog:
@@ -30,9 +29,7 @@ class Blog:
 
 
 def toMarkdown(filename):
-    md = file(filename).read().decode('utf-8')
-    return markdown(md, gconf['markdown config'].split(),
-                    output_format='html5')
+    return md.convert(open(filename).read().decode('utf-8'))
 
 
 def renderToFile(tofile, template, **params):
@@ -68,7 +65,7 @@ def walk(relpath=''):
 def per_blog(relpath=''):
     p = path.join('blog', relpath)
     to = path.join('html', relpath)
-    conf = json.load(file(path.join(p, 'config.json')))
+    conf = json.load(open(path.join(p, 'config.json')))
 
     date = datetime.strptime(conf['date'], '%Y-%m-%d %H:%M')
     # fix url problem in Windows
@@ -117,13 +114,11 @@ def paging(infos):
     os.mkdir('html/page')
     for idx, blogs in enumerate(pages):
         is_last = (idx == len(pages) - 1)
-        url = path.join('html/page', str(idx + 1))
-        os.mkdir(url)
-        renderToFile(path.join(url, 'index.html'), 'pagination.html',
+        renderToFile('html/page/{}.html'.format(idx+1), 'pagination.html',
                      blogs=blogs, idx=idx, is_last=is_last)
 
     # generate index.html
-    open('html/index.html', 'w').write(file('html/page/1/index.html').read())
+    open('html/index.html', 'w').write(open('html/page/1.html').read())
 
 #====================================================
 
@@ -158,10 +153,8 @@ def tags(infos):
 
     # tag page
     for t in tags:
-        d = 'html/tags/' + t
-        os.mkdir(d)
         tags[t]['blogs'].sort(key=lambda b: b.date, reverse=True)
-        renderToFile(path.join(d, 'index.html'), 'tag.html',
+        renderToFile('html/tags/{}.html'.format(t), 'tag.html',
                      tag=t, blogs=tags[t]['blogs'])
 
 #=============================================================
@@ -172,7 +165,7 @@ def pages():
                   os.listdir('page'))
     for d in dirs:
         p = path.join('page', d)
-        conf = json.load(file(path.join(p, 'config.json')))
+        conf = json.load(open(path.join(p, 'config.json')))
         to = path.join('html', d)
         os.mkdir(to)
 
