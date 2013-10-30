@@ -28,21 +28,24 @@ Long long very long English? Long long very long English! Long long very long En
 
 测试图片：
 
-![pic](img/head.jpg)
-
-<img class=align-center src='img/head.jpg' style='width:100px'/>
+![pic](img/Octocat.png)
 
 测试外部图片：
 
-![pic2](https://assets.github.com/images/modules/about_page/octocat.png)
+![pic2](http://www.python.org/community/logos/python-logo.png)
 
 测试代码块：
 
 ~~~~{.python}
-A = r'''B = "A = r\'''" + A + "\'''\n" + A
-print B'''
-B = "A = r\'''" + A + "\'''\n" + A
-print B
+def fib(n, memo={1: (0, 1, 1)}):
+    if n in memo:
+        return memo[n]
+    a, b, c = fib(n/2)
+    a, b, c = a*a+b*b, a*b+b*c, b*b+c*c
+    if n & 1:
+        a, b, c = b, c, b+c
+    memo[n] = a, b, c
+    return memo[n]
 ~~~~
 
 测试表格：
