@@ -13,7 +13,7 @@
 # endfor
 <div class=pagination>
 # if idx:
-  <a href="/page/{{idx}}">&laquo; Previous</a>
+  <a href="/page/{{idx}}.html">&laquo; Previous</a>
 # else:
   <span>&laquo; Previous</span>
 # endif
@@ -21,7 +21,7 @@
 # if is_last:
   <span>Next &raquo;</span>
 # else:
-  <a href="/page/{{idx+2}}">Next &raquo;</a>
+  <a href="/page/{{idx+2}}.html">Next &raquo;</a>
 # endif
 </div>
 
