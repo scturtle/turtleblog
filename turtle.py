@@ -11,6 +11,12 @@ from os import path
 from math import log
 from datetime import datetime
 from collections import defaultdict
+try:
+    import IPython
+    import IPython.nbconvert as nb
+except:
+    pass
+
 
 gconf = json.load(open('config.json'))
 md = markdown.Markdown(extensions=gconf['markdown config'].split(),
@@ -24,6 +30,7 @@ env.filters['dateformat'] = dateformat
 
 
 class Blog:
+
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
 
@@ -52,7 +59,10 @@ def copyImg(src_dir, dest_dir):
 def walk(relpath=''):
     p = path.join('blog', relpath)
     to = path.join('html', relpath)
-    os.mkdir(to)
+    try:
+        os.mkdir(to)
+    except:
+        pass
     if path.exists(path.join(p, 'config.json')):
         return [per_blog(relpath)]
     else:
@@ -71,8 +81,17 @@ def per_blog(relpath=''):
     # fix url problem in Windows
     url = '/{}/'.format(relpath).replace('\\', '/')
 
-    # render markdown
-    content = toMarkdown(path.join(p, 'blog.md'))
+    # render
+    ipynb = os.path.exists(path.join(p, 'blog.ipynb'))
+    if ipynb:
+        config = IPython.Config(
+            {'HTMLExporter': {'default_template': 'basic'}})
+        html = nb.export_html(
+            open(path.join(p, 'blog.ipynb')), config=config)[0]
+        html = html.replace('\n</pre>', '</pre>')
+        content = u'<div class="ipynb">\n{}\n</div>'.format(html)
+    else:
+        content = toMarkdown(path.join(p, 'blog.md'))
 
     # render template
     renderToFile(path.join(to, 'index.html'), 'blog.html',
@@ -80,6 +99,7 @@ def per_blog(relpath=''):
                  date=date,
                  tags=conf['tags'].split(),
                  enable_mathjax=conf.get('enable mathjax', False),
+                 ipynb=ipynb,
                  content=content)
     copyImg(p, to)
 
@@ -114,7 +134,7 @@ def paging(infos):
     os.mkdir('html/page')
     for idx, blogs in enumerate(pages):
         is_last = (idx == len(pages) - 1)
-        renderToFile('html/page/{}.html'.format(idx+1), 'pagination.html',
+        renderToFile('html/page/{}.html'.format(idx + 1), 'pagination.html',
                      blogs=blogs, idx=idx, is_last=is_last)
 
     # generate index.html

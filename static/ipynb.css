@@ -1,0 +1,188 @@
+.ipynb div {overflow:visible;}
+.ipynb h1,.ipynb h2,.ipynb h3,.ipynb h4,.ipynb h5,.ipynb h6 {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+.ipynb div, .ipynb span, .ipynb object, .ipynb iframe, .ipynb p, .ipynb blockquote, .ipynb pre, .ipynb abbr, .ipynb address, .ipynb cite, .ipynb code, .ipynb del, .ipynb dfn, .ipynb em, .ipynb img, .ipynb ins, .ipynb kbd, .ipynb q, .ipynb samp, .ipynb small, .ipynb strong, .ipynb sub, .ipynb sup, .ipynb var, .ipynb b, .ipynb i, .ipynb dl, .ipynb dt, .ipynb dd, .ipynb ol, .ipynb ul, .ipynb li, .ipynb fieldset, .ipynb form, .ipynb label, .ipynb legend, .ipynb table, .ipynb caption, .ipynb tbody, .ipynb tfoot, .ipynb thead, .ipynb tr, .ipynb th, .ipynb td, .ipynb article, .ipynb aside, .ipynb canvas, .ipynb details, .ipynb figcaption, .ipynb figure, .ipynb footer, .ipynb header, .ipynb hgroup, .ipynb menu, .ipynb nav, .ipynb section, .ipynb summary, .ipynb time, .ipynb mark, .ipynb audio, .ipynb video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+.ipynb sup {vertical-align:super}
+.ipynb sub {vertical-align:sub}
+.ipynb article, .ipynb aside, .ipynb details, .ipynb figcaption, .ipynb figure, .ipynb footer, .ipynb header, .ipynb hgroup, .ipynb menu, .ipynb nav, .ipynb section {display:block}
+.ipynb blockquote, .ipynb q {quotes:none}
+.ipynb blockquote:before, .ipynb blockquote:after, .ipynb q:before, .ipynb q:after {content:"";content:none}
+.ipynb ins {background-color:#ff9;color:#000;text-decoration:none}
+.ipynb mark {background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+.ipynb del {text-decoration:line-through}
+.ipynb abbr[title], .ipynb dfn[title] {border-bottom:1px dotted;cursor:help}
+.ipynb table {border-collapse:collapse;border-spacing:0}
+.ipynb hr {display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+.ipynb input, .ipynb select {vertical-align:middle}
+.ipynb div {font:13px/1.231 sans-serif;*font-size:small}
+.ipynb select, .ipynb input, .ipynb textarea, .ipynb button {font:99% sans-serif}
+.ipynb pre, .ipynb code, .ipynb kbd, .ipynb samp {font-family:monospace,sans-serif}
+.ipynb em, .ipynb i {font-style:italic}
+.ipynb b, .ipynb strong {font-weight:bold}
+.ipynb .hbox {display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch}
+.ipynb .hbox>* {-webkit-box-flex:0;-moz-box-flex:0;box-flex:0}
+.ipynb .vbox {display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch}
+.ipynb .vbox>* {-webkit-box-flex:0;-moz-box-flex:0;box-flex:0}
+.ipynb .reverse {-webkit-box-direction:reverse;-moz-box-direction:reverse;box-direction:reverse}
+.ipynb .box-flex0 {-webkit-box-flex:0;-moz-box-flex:0;box-flex:0}
+.ipynb .box-flex1, .ipynb .box-flex {-webkit-box-flex:1;-moz-box-flex:1;box-flex:1}
+.ipynb .box-flex2 {-webkit-box-flex:2;-moz-box-flex:2;box-flex:2}
+.ipynb .box-group1 {-webkit-box-flex-group:1;-moz-box-flex-group:1;box-flex-group:1}
+.ipynb .box-group2 {-webkit-box-flex-group:2;-moz-box-flex-group:2;box-flex-group:2}
+.ipynb .start {-webkit-box-pack:start;-moz-box-pack:start;box-pack:start}
+.ipynb .end {-webkit-box-pack:end;-moz-box-pack:end;box-pack:end}
+.ipynb .center {-webkit-box-pack:center;-moz-box-pack:center;box-pack:center}
+.ipynb span#save_widget {padding:5px;margin:0 0 0 300px;display:inline-block}
+.ipynb span#notebook_name {height:1em;line-height:1em;padding:3px;border:0;font-size:146.5%}
+.ipynb .ui-menubar-item .ui-button .ui-button-text {padding:.4em 1.0em;font-size:100%}
+.ipynb .ui-menu {-moz-box-shadow:0 6px 10px -1px #adadad;-webkit-box-shadow:0 6px 10px -1px #adadad;box-shadow:0 6px 10px -1px #adadad}
+.ipynb .ui-menu .ui-menu-item a {border:1px solid transparent;padding:2px 1.6em}
+.ipynb .ui-menu .ui-menu-item a.ui-state-focus {margin:0}
+.ipynb .ui-menu hr {margin:.3em 0}
+.ipynb #menubar_container {position:relative}
+.ipynb #notification {position:absolute;right:3px;top:3px;height:25px;padding:3px 6px;z-index:10}
+.ipynb #toolbar {padding:3px 15px}
+.ipynb #cell_type {font-size:85%}
+.ipynb div#main_app {width:100%;position:relative}
+.ipynb span#quick_help_area {position:static;padding:5px 0;margin:0}
+.ipynb .help_string {float:right;width:170px;padding:0 5px;text-align:left;font-size:85%}
+.ipynb .help_string_label {float:right;font-size:85%}
+.ipynb div#notebook_panel {margin:0;padding:0}
+.ipynb div#notebook {overflow-y:scroll;overflow-x:auto;width:100%;padding:5px 5px 15px 5px;margin:0;background-color:white}
+.ipynb div#pager_splitter {height:8px}
+.ipynb div#pager {padding:15px;overflow:auto;display:none}
+.ipynb div.ui-widget-content {border:1px solid #aaa;outline:0}
+.ipynb .cell {border:1px solid transparent}
+.ipynb div.cell {width:100%;padding:5px 5px 5px 0;margin:2px 0 2px 0}
+.ipynb div.prompt {width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right}
+.ipynb div.input {page-break-inside:avoid}
+.ipynb div.input_area {color:black;border:1px solid #ddd;border-radius:3px;background:#f7f7f7}
+.ipynb div.input_prompt {color:navy;border-top:1px solid transparent}
+.ipynb div.output_wrapper {margin-top:5px;margin-left:5px;width:100%;position:relative}
+.ipynb div.output_scroll {height:24em;width:100%;overflow:auto;border-radius:3px;box-shadow:inset 0 2px 8px rgba(0,0,0,.8)}
+.ipynb div.output_collapsed {margin-right:5px}
+.ipynb div.out_prompt_overlay {height:100%;padding:0;position:absolute;border-radius:3px}
+.ipynb div.out_prompt_overlay:hover {box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,0.5)}
+.ipynb div.output_prompt {color:darkred;margin:0 5px 0 -5px}
+.ipynb div.output_area {padding:0;page-break-inside:avoid}
+.ipynb div.output_subarea {padding:.4em .4em .4em .4em}
+.ipynb div.output_text {text-align:left;color:black;font-family:monospace}
+.ipynb div.output_stream {padding-top:.0em;padding-bottom:.0em}
+.ipynb div.output_stderr {background:#fdd}
+.ipynb div.output_latex {text-align:left;color:black}
+.ipynb div.text_cell {background-color:white;padding:5px 5px 5px 5px}
+.ipynb div.text_cell_input {color:black;border:1px solid #ddd;border-radius:3px;background:#f7f7f7}
+.ipynb div.text_cell_render {font-family:"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;outline:0;resize:none;width:inherit;border-style:none;padding:5px;color:black}
+.ipynb .CodeMirror {line-height:1.231}
+.ipynb .CodeMirror-scroll {height:auto;overflow-y:hidden;overflow-x:auto}
+.ipynb .ansiblack {color:black}
+.ipynb .ansired {color:darkred}
+.ipynb .ansigreen {color:darkgreen}
+.ipynb .ansiyellow {color:brown}
+.ipynb .ansiblue {color:darkblue}
+.ipynb .ansipurple {color:darkviolet}
+.ipynb .ansicyan {color:steelblue}
+.ipynb .ansigrey {color:grey}
+.ipynb .ansibold {font-weight:bold}
+.ipynb .completions {position:absolute;z-index:10;overflow:hidden;border:1px solid grey}
+.ipynb .completions select {background:white;outline:0;border:0;padding:0;margin:0;overflow:auto;font-family:monospace}
+.ipynb option.context {background-color:#def7ff}
+.ipynb option.introspection {background-color:#ebf4eb}
+.ipynb .completions p b {font-weight:bold}
+.ipynb .completions p {background:#DDF;border-bottom:black solid 1px;padding:1px;font-family:monospace}
+.ipynb pre.dialog {background-color:#f7f7f7;border:1px solid #ddd;border-radius:3px;padding:.4em;padding-left:2em}
+.ipynb p.dialog {padding:.2em}
+.ipynb .shortcut_key {display:inline-block;width:15ex;text-align:right;font-family:monospace}
+.ipynb pre, .ipynb code, .ipynb kbd, .ipynb samp {white-space:pre-wrap}
+.ipynb #fonttest {font-family:monospace}
+.ipynb .js-error {color:darkred}
+.ipynb .rendered_html {color:black}
+.ipynb .rendered_html em {font-style:italic}
+.ipynb .rendered_html strong {font-weight:bold}
+.ipynb .rendered_html u {text-decoration:underline}
+.ipynb .rendered_html :link {text-decoration:underline}
+.ipynb .rendered_html :visited {text-decoration:underline}
+.ipynb .rendered_html h1 {font-size:197%;margin:.65em 0;font-weight:bold}
+.ipynb .rendered_html h2 {font-size:153.9%;margin:.75em 0;font-weight:bold}
+.ipynb .rendered_html h3 {font-size:123.1%;margin:.85em 0;font-weight:bold}
+.ipynb .rendered_html h4 {font-size:100% margin:.95em 0;font-weight:bold}
+.ipynb .rendered_html h5 {font-size:85%;margin:1.5em 0;font-weight:bold}
+.ipynb .rendered_html h6 {font-size:77%;margin:1.65em 0;font-weight:bold}
+.ipynb .rendered_html ul {list-style:disc;margin:1em 2em}
+.ipynb .rendered_html ul ul {list-style:square;margin:0 2em}
+.ipynb .rendered_html ul ul ul {list-style:circle;margin-left:0 2em}
+.ipynb .rendered_html ol {list-style:upper-roman;margin:1em 2em}
+.ipynb .rendered_html ol ol {list-style:upper-alpha;margin:0 2em}
+.ipynb .rendered_html ol ol ol {list-style:decimal;margin:0 2em}
+.ipynb .rendered_html ol ol ol ol {list-style:lower-alpha;margin 0 2em}
+.ipynb .rendered_html ol ol ol ol ol {list-style:lower-roman;0em 2em}
+.ipynb .rendered_html hr {color:black;background-color:black}
+.ipynb .rendered_html pre {margin:1em 2em}
+.ipynb .rendered_html blockquote {margin:1em 2em}
+.ipynb .rendered_html table {border:1px solid black;border-collapse:collapse;margin:1em 2em}
+.ipynb .rendered_html td {border:1px solid black;text-align:left;vertical-align:middle;padding:4px}
+.ipynb .rendered_html th {border:1px solid black;text-align:left;vertical-align:middle;padding:4px;font-weight:bold}
+.ipynb .rendered_html tr {border:1px solid black}
+.ipynb .rendered_html p+p {margin-top:1em}
+.ipynb .input_area {padding:.4em}
+.ipynb .highlight .hll {background-color:#ffc}
+.ipynb .highlight {background:#f8f8f8}
+.ipynb .highlight .c {color:#408080;font-style:italic}
+.ipynb .highlight .err {border:1px solid #f00}
+.ipynb .highlight .k {color:#008000;font-weight:bold}
+.ipynb .highlight .o {color:#666}
+.ipynb .highlight .cm {color:#408080;font-style:italic}
+.ipynb .highlight .cp {color:#bc7a00}
+.ipynb .highlight .c1 {color:#408080;font-style:italic}
+.ipynb .highlight .cs {color:#408080;font-style:italic}
+.ipynb .highlight .gd {color:#a00000}
+.ipynb .highlight .ge {font-style:italic}
+.ipynb .highlight .gr {color:#f00}
+.ipynb .highlight .gh {color:#000080;font-weight:bold}
+.ipynb .highlight .gi {color:#00a000}
+.ipynb .highlight .go {color:#888}
+.ipynb .highlight .gp {color:#000080;font-weight:bold}
+.ipynb .highlight .gs {font-weight:bold}
+.ipynb .highlight .gu {color:#800080;font-weight:bold}
+.ipynb .highlight .gt {color:#04d}
+.ipynb .highlight .kc {color:#008000;font-weight:bold}
+.ipynb .highlight .kd {color:#008000;font-weight:bold}
+.ipynb .highlight .kn {color:#008000;font-weight:bold}
+.ipynb .highlight .kp {color:#008000}
+.ipynb .highlight .kr {color:#008000;font-weight:bold}
+.ipynb .highlight .kt {color:#b00040}
+.ipynb .highlight .m {color:#666}
+.ipynb .highlight .s {color:#ba2121}
+.ipynb .highlight .na {color:#7d9029}
+.ipynb .highlight .nb {color:#008000}
+.ipynb .highlight .nc {color:#00f;font-weight:bold}
+.ipynb .highlight .no {color:#800}
+.ipynb .highlight .nd {color:#a2f}
+.ipynb .highlight .ni {color:#999;font-weight:bold}
+.ipynb .highlight .ne {color:#d2413a;font-weight:bold}
+.ipynb .highlight .nf {color:#00f}
+.ipynb .highlight .nl {color:#a0a000}
+.ipynb .highlight .nn {color:#00f;font-weight:bold}
+.ipynb .highlight .nt {color:#008000;font-weight:bold}
+.ipynb .highlight .nv {color:#19177c}
+.ipynb .highlight .ow {color:#a2f;font-weight:bold}
+.ipynb .highlight .w {color:#bbb}
+.ipynb .highlight .mf {color:#666}
+.ipynb .highlight .mh {color:#666}
+.ipynb .highlight .mi {color:#666}
+.ipynb .highlight .mo {color:#666}
+.ipynb .highlight .sb {color:#ba2121}
+.ipynb .highlight .sc {color:#ba2121}
+.ipynb .highlight .sd {color:#ba2121;font-style:italic}
+.ipynb .highlight .s2 {color:#ba2121}
+.ipynb .highlight .se {color:#b62;font-weight:bold}
+.ipynb .highlight .sh {color:#ba2121}
+.ipynb .highlight .si {color:#b68;font-weight:bold}
+.ipynb .highlight .sx {color:#008000}
+.ipynb .highlight .sr {color:#b68}
+.ipynb .highlight .s1 {color:#ba2121}
+.ipynb .highlight .ss {color:#19177c}
+.ipynb .highlight .bp {color:#008000}
+.ipynb .highlight .vc {color:#19177c}
+.ipynb .highlight .vg {color:#19177c}
+.ipynb .highlight .vi {color:#19177c}
+.ipynb .highlight .il {color:#666}
