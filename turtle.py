@@ -12,7 +12,6 @@ from math import log
 from datetime import datetime
 from collections import defaultdict
 try:
-    import IPython
     import IPython.nbconvert as nb
 except:
     pass
@@ -84,10 +83,8 @@ def per_blog(relpath=''):
     # render
     ipynb = os.path.exists(path.join(p, 'blog.ipynb'))
     if ipynb:
-        config = IPython.Config(
-            {'HTMLExporter': {'default_template': 'basic'}})
-        html = nb.export_html(
-            open(path.join(p, 'blog.ipynb')), config=config)[0]
+        html = nb.HTMLExporter(template_file='basic').from_filename(
+                path.join(p, 'blog.ipynb'))[0]
         html = html.replace('\n</pre>', '</pre>')
         content = u'<div class="ipynb">\n{}\n</div>'.format(html)
     else:
