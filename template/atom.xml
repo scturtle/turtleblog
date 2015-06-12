@@ -3,16 +3,16 @@
 
   <title><![CDATA[{{ site_name | safe }}]]></title>
   <link href="{{ site_url }}/atom.xml" rel="self"/>
-  <link href="{{ site_url }}/"/>
-  <updated>{{ now | dateformat('%Y-%m-%dT%H:%M:00') }}</updated>
-  <id>{{ site_url }}</id>
+  <link href="{{ site_url }}"/>
+  <updated>{{ now.isoformat('T')+'+08:00' }}</updated>
+  <id>{{ site_url }}/</id>
   
 # for blog in blogs:
   <entry>
     <title type="html"><![CDATA[{{ blog.title }}]]></title>
     <author> <name><![CDATA[{{ author }}]]></name> </author>
     <link href="{{ site_url }}{{ blog.url }}"/>
-    <updated>{{ blog.date | dateformat('%Y-%m-%dT%H:%M:00') }}</updated>
+    <updated>{{ blog.date.isoformat('T')+'+08:00' }}</updated>
     <id>{{ site_url }}{{ blog.url }}</id>
     <content type="html"><![CDATA[
 {{ blog.content | safe }}

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+from __future__ import unicode_literals
 import re
 import os
 import json
@@ -24,8 +24,8 @@ md = markdown.Markdown(extensions=gconf['markdown config'].split(),
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('template'),
                          autoescape=True, line_statement_prefix='#')
 
-dateformat = lambda val, fmt='%B {}, %Y': val.strftime(fmt).format(val.day)
-env.filters['dateformat'] = dateformat
+env.filters['dateformat'] =\
+         lambda val, fmt='%b {}, %Y': val.strftime(fmt).format(val.day)
 
 
 class Blog:
@@ -35,7 +35,7 @@ class Blog:
 
 
 def toMarkdown(filename):
-    return md.convert(open(filename).read().decode('utf-8'))
+    return md.convert(open(filename).read())
 
 
 def renderToFile(tofile, template, **params):
@@ -44,7 +44,7 @@ def renderToFile(tofile, template, **params):
                             site_url=gconf['site url'],
                             author=gconf['author'],
                             disqus_shortname=gconf['disqus shortname'],
-                            **params).encode('utf-8'))
+                            **params))
 
 
 def copyImg(src_dir, dest_dir):

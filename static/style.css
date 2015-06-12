@@ -1,22 +1,15 @@
-/* modified from http://lucumr.pocoo.org/ */
+/* modified from lucumr.pocoo.org, haskell-lang.org */
 /* general style */
-body {  font-family: /* from "safe web fonts" */
-        "Palatino Linotype",	/* Windows */
-        "URW Palladio L",	/* Unix+FontConfig (ugly!) */
-        "palladio l",		/* Unix+X+FreeType */
-        palatino,		/* MacOS */
-        "book antiqua",		/* Win95 */
-        /* Fallback options */
-        times,			/* Unix+X, MacOS */
-        serif;
-        /* "Goudy Old Style" is vaguely like Palatino. */
-        background-image: url("/static/bg.png"); /*from lhzhang.com*/
-        /*background-color: #F8F8F8;*/
-        font-size: 16px; margin: 0; padding: 0; }
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+/*@import url(//fonts.useso.com/css?family=Open+Sans);*/
+body { font-family: 'Open Sans', sans-serif;
+       font-size: 16px; margin: 0; padding: 0;
+       color: #333; background-color: #fdfdfd; }
 hr   { border: none; border-top: 1px solid #ddd; height: 0; }
-a    { color: #204A87; text-decoration: none; }
-code { color: #204A87; }
+a    { color: #37638E; text-decoration: none; }
+code { color: #37638E; }
 a:hover { text-decoration: underline; }
+mathjax { font-size: 14px; }
 
 /* headlines */
 h1, h2, h3, h4, h5, h6      { font-weight: normal; }
@@ -24,19 +17,19 @@ h1                          { font-size: 30px; }
 h2                          { font-size: 24px; }
 
 /* layout elements */
-div.body                    { clear: both; /*border-top: 1px solid #bbb;*/
-                              padding-top: 20px;}
-div.container               { width: 740px; margin: 64px auto; padding: 0; }
-div.header                  { float: left; }
-div.header a                { font-size: 24px; }
-div.navigation              { float: right; padding-top: 8px; }
-div.navigation ul           { margin: 0; padding: 0; list-style: none; }
-div.navigation ul li        { display: inline; margin: 0 2px; padding: 0; }
-div.footer                  { border-top: 1px dotted #bbb; padding-top: 9px;
-                              margin-top: 32px; font-size: 16px; color: #555;
+div.body                    { clear: both; }
+div.container               { width: 740px; margin: 20px auto; padding: 0; }
+div.header                  { line-height: 64px; border-bottom: 1px dotted #bbb; }
+.site-name                  { font-size: 24px;
+                              color: white; background-color: #6285a7;
+                              border-radius: 4px; padding: 0 10px; }
+nav                         { float: right; padding-top: 8px; }
+nav > a                     { margin: 0 2px; }
+div.footer                  { padding-top: 9px; border-top: 1px dotted #bbb;
+                              margin-top: 24px; font-size: 16px; color: #555;
                               text-align: center; }
 div.footer p                { margin: 0; }
-h1 + .info                  { color: #555; margin-top: -15px; font-style: italic; }
+h1 + .info                  { color: #555; margin-top: -15px; }
 
 /* margins and stuff */
 p, ul, ol, pre, table       { line-height: 1.5; margin: 20px 0; }
@@ -46,29 +39,28 @@ li                          { padding: 0; }
 /* code */
 pre, code { font-family: Menlo,Monaco,"Andale Mono",
             "lucida console", "Courier New",monospace;
-            border: 1px solid #ddd; border-radius: 5px; }
-pre       { font-size: 0.82em; line-height: 1.3em; 
-            padding: 10px; background: #f5f5f5;
-            overflow: auto;}
-code      { font-size: 13px; background: #f5f5f5;
-            padding: 2px 5px; margin: 0 2px; }
+            /*border: 1px solid #ccc;*/ border-radius: 4px;
+            color: #333;  background-color: #eef0f3; }
+pre       { font-size: 0.82em; line-height: 1.42857; 
+            padding: 10px; overflow: auto;}
+code      { font-size: 13px; padding: 2px 5px; margin: 0 2px; }
 
 /* tables */
 table           { border: 1px solid #ddd; border-collapse: collapse;
-                  background: #fafafa; }
+                  background-color: #eef0f3; }
 td, th          { padding: 2px 12px; border: 1px solid #ddd; }
 
 /* blog overview */
 div.overview       { margin: 25px 122px 25px 102px; }
 div.overview h1    { display: inline; font-size: 20px; }
-div.detail         { margin-left: 140px; }
+div.detail         { margin-left: 150px; }
 div.date           { padding-top: 2px;
-                     float: left; width: 125px; color: #555;
-                     text-align: right; font-style: italic; }
+                     float: left; width: 135px; color: #555;
+                     text-align: right; font-size: 14px; }
 
 /* picture */
 img { border-radius: 0.2em;
-      box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+      box-shadow: rgba(0,0,0,0.15) 0 1px 2px;
       box-sizing: border-box;
       border: #fff 0.3em solid;
       display: block; margin: 0 auto; 
@@ -78,7 +70,7 @@ img { border-radius: 0.2em;
       }
 
 /* pagination */
-div.pagination  { margin: 24px 0 0 0; text-align: center; }
+div.pagination  { text-align: center; }
 
 /*tags*/
 ul.tagcloud     { font-size: 16px; margin: 36px 0; padding: 0;

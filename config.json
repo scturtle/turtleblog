@@ -1,6 +1,6 @@
 {
     "site name": "ScTurtle's Pool",
-    "site url": "http://scturtle.me",
+    "site url": "https://scturtle.me/",
     "author": "scturtle",
     "number of blogs per page": 7,
     "markdown config":"extra codehilite(guess_lang=False) mathjax",
